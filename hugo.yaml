@@ -72,6 +72,9 @@ menu:
     - name: Awards
       url: "/#awards"
       weight: 60
+    - name: Media
+      url: "/#media"
+      weight: 65
     - name: CV
       url: "/files/cv.pdf"
       weight: 70

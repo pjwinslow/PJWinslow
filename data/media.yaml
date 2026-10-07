@@ -1,0 +1,15 @@
+# News stories, videos, and interviews, newest first.
+# type: Article | Video | Podcast | Interview
+- title: "Science fiction to science fact"
+  outlet: "College of Biological Sciences, University of Minnesota"
+  date: "September 2024"
+  type: "Article"
+  url: "https://cbs.umn.edu/blog-posts/science-fiction-science-fact"
+  description: "Graduate student and NASA FINESST grant recipient Peter Winslow explores the possibility of extraterrestrial life."
+
+- title: "Peter Winslow"
+  outlet: "University of Minnesota Graduate School, YouTube"
+  date: ""
+  type: "Video"
+  url: "https://www.youtube.com/watch?v=yd1VEyYvX0E"
+  description: ""

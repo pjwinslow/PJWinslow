@@ -7,5 +7,6 @@
 - [Publications](https://pjwinslow.github.io/PJWinslow-website/#publications): coming soon
 - [Presentations](https://pjwinslow.github.io/PJWinslow-website/#presentations): talks and posters
 - Funding: NASA FINESST, NNH23ZDA001N-FINESST 23-PLANET23-0058
+- [In the media](https://pjwinslow.github.io/PJWinslow-website/#media): "Science fiction to science fact" (College of Biological Sciences, September 2024) and a University of Minnesota Graduate School video
 - [CV (PDF)](https://pjwinslow.github.io/PJWinslow-website/files/cv.pdf)
 - Contact: PjWinslowBio@gmail.com

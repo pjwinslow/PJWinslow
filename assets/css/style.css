@@ -90,7 +90,7 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; text-und
 }
 .nav-name:visited { color: var(--color-text); }
 .nav-name:hover { color: var(--color-accent); text-decoration: none; }
-.nav-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; list-style: none; padding: 0; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; list-style: none; padding: 0; }
 .nav-links a {
   color: var(--color-text); font-size: 0.9rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.08em;
@@ -235,7 +235,7 @@ h2 {
 .plain-list { padding-left: 1.2rem; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .js .nav-toggle {
     display: inline-flex; align-items: center; justify-content: center;
     width: 2.75rem; height: 2.75rem; margin-left: auto;
@@ -298,3 +298,11 @@ h2 {
 }
 .band--alt .coming-soon-label { background: var(--color-surface); }
 .funding .meta { overflow-wrap: anywhere; }
+
+/* ---------- Media ---------- */
+.media-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1.5rem; }
+.media-card { border: 1px solid var(--color-border); border-top: 3px solid var(--color-accent); padding: 1.5rem; min-width: 0; }
+.media-type { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-institution); margin-bottom: 0.5rem; }
+.media-title { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; margin-bottom: 0.5rem; }
+.media-title a::after { content: " \2197"; font-family: var(--font-body); font-size: 0.8em; }
+.media-card p:last-child { margin-bottom: 0; }
