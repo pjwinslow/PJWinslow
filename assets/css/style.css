@@ -306,3 +306,12 @@ h2 {
 .media-title { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; margin-bottom: 0.5rem; }
 .media-title a::after { content: " \2197"; font-family: var(--font-body); font-size: 0.8em; }
 .media-card p:last-child { margin-bottom: 0; }
+
+/* ---------- Research header logo ---------- */
+.research-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 3rem; align-items: center; margin-bottom: 0.5rem; }
+.research-head h2 { margin-bottom: 1rem; }
+.research-logo { width: clamp(11rem, 22vw, 16rem); height: auto; }
+@media (max-width: 768px) {
+  .research-head { grid-template-columns: minmax(0, 1fr); }
+  .research-logo { width: 13rem; margin-bottom: 1rem; }
+}

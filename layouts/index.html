@@ -72,8 +72,15 @@
 {{ with site.Data.research }}
 <section class="band band--alt" id="research" aria-labelledby="research-h">
   <div class="wrap">
-    <p class="eyebrow">Research</p>
-    <h2 id="research-h">How function emerges from chains of amino acids</h2>
+    <div class="research-head">
+      <div>
+        <p class="eyebrow">Research</p>
+        <h2 id="research-h">How function emerges from chains of amino acids</h2>
+      </div>
+      {{ with $p.research_logo }}
+      <img class="research-logo" src="{{ . | relURL }}" {{ with imageConfig (path.Join "static" .) }}width="{{ .Width }}" height="{{ .Height }}"{{ end }} alt="{{ $p.research_logo_alt }}" loading="lazy">
+      {{ end }}
+    </div>
     <div class="projects">
       {{ range . }}
       <article class="project">

@@ -87,6 +87,7 @@ Upload the new PDF to `static/files/` with the same name, `cv.pdf`, replacing th
 
 - **Headshot** (top of the page): replace `static/images/headshot.jpg`.
 - **Lab photo** (beside your bio): replace `static/images/lab.jpg`.
+- **Primordial Park logo** (Research section): replace `static/images/primordial-park.webp`.
 - **PJW initials** (above your name, made from three protein structures): replace `static/images/pjw-monogram.webp`. Use an image with a transparent background and light-coloured shapes, since it sits on the dark band.
 
 Keep the same file names, or change the matching `photo`, `lab_photo`, or `monogram` line in `hugo.yaml`. The descriptions read by screen readers are the `_alt` lines next to them.

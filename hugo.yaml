@@ -26,6 +26,8 @@ params:
   lab_photo_alt: "Peter J. Winslow in a white lab coat and purple gloves, pipetting at a laboratory bench."
   monogram: "images/pjw-monogram.webp"
   monogram_alt: "The initials PJW, each letter formed by a protein structure."
+  research_logo: "images/primordial-park.webp"
+  research_logo_alt: "Primordial Park logo: a protein structure and an ATP molecule above the words Primordial Park."
   cv: "files/cv.pdf"
   funding:
     - name: "NASA FINESST"
