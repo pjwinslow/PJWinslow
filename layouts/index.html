@@ -151,6 +151,7 @@
           <p class="row-title">{{ .title | markdownify }}</p>
           <p class="meta">{{ .venue }}, {{ .place }}</p>
           <p class="meta">{{ partial "authors.html" .authors }}</p>
+          {{ with .video }}<p class="meta"><a href="{{ . }}" target="_blank" rel="noopener">Watch the talk<span class="visually-hidden"> (opens in a new tab)</span></a></p>{{ end }}
         </div>
       </li>
       {{ end }}

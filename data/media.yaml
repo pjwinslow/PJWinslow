@@ -1,11 +1,18 @@
 # News stories, videos, and interviews, newest first.
-# type: Article | Video | Podcast | Interview
+# type: Article | Video | Talk | Podcast | Interview
 - title: "Science fiction to science fact"
   outlet: "College of Biological Sciences, University of Minnesota"
   date: "September 2024"
   type: "Article"
   url: "https://cbs.umn.edu/blog-posts/science-fiction-science-fact"
   description: "Graduate student and NASA FINESST grant recipient Peter Winslow explores the possibility of extraterrestrial life."
+
+- title: "Structural insights into the origin of life through model primordial proteins"
+  outlet: "Astrobiology Graduate Conference (AbGradCon) 2024, Cornell University · NASA Astrobiology livestream"
+  date: "2024"
+  type: "Talk"
+  url: "https://www.youtube.com/live/BXAeM2362FU?t=8988"
+  description: "My conference talk, livestreamed by NASA Astrobiology. The link starts at my talk (2:29:48)."
 
 - title: "Three-Minute Thesis, 2023"
   outlet: "University of Minnesota Graduate School, YouTube"

@@ -1,4 +1,5 @@
 # Presentations, newest first. type: oral | poster
+# video: optional link to a recording
 - title: "Functional characterization of *de novo* primordial-like proteins"
   venue: "Biophysical Society Meeting 2026"
   place: "San Francisco, CA"
@@ -35,6 +36,7 @@
   year: 2024
   type: oral
   authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]
+  video: "https://www.youtube.com/live/BXAeM2362FU?t=8988"
 - title: "Primordial-like proteins created in a test tube"
   venue: "Astrobiology Graduate Conference"
   place: "San Diego, CA"
