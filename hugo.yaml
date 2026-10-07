@@ -1,6 +1,6 @@
 # The site's public address. If the repository is renamed to pjwinslow.github.io,
 # change this to "https://pjwinslow.github.io/".
-baseURL: "https://pjwinslow.github.io/PJWinslow-website/"
+baseURL: "https://pjwinslow.github.io/PJWinslow/"
 title: "Peter J. Winslow"
 languageCode: en-us
 

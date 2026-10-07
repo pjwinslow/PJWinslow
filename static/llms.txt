@@ -2,11 +2,11 @@
 
 > Peter J. Winslow is a fifth-year PhD candidate in the Department of Biochemistry, Molecular Biology, and Biophysics at the University of Minnesota, advised by Burckhard Seelig and affiliated with the BioTechnology Institute. Research areas: protein sequence space, the origin of life, new-to-nature proteins, and protein design, studied with reduced amino acid alphabets, biophysical characterization, X-ray crystallography, and protein language models.
 
-- [Home](https://pjwinslow.github.io/PJWinslow-website/): biography and research interests
-- [Research](https://pjwinslow.github.io/PJWinslow-website/#research): current projects
-- [Publications](https://pjwinslow.github.io/PJWinslow-website/#publications): coming soon
-- [Presentations](https://pjwinslow.github.io/PJWinslow-website/#presentations): talks and posters
+- [Home](https://pjwinslow.github.io/PJWinslow/): biography and research interests
+- [Research](https://pjwinslow.github.io/PJWinslow/#research): current projects
+- [Publications](https://pjwinslow.github.io/PJWinslow/#publications): coming soon
+- [Presentations](https://pjwinslow.github.io/PJWinslow/#presentations): talks and posters
 - Funding: NASA FINESST, NNH23ZDA001N-FINESST 23-PLANET23-0058
-- [In the media](https://pjwinslow.github.io/PJWinslow-website/#media): "Science fiction to science fact" (College of Biological Sciences, September 2024), a recorded AbGradCon 2024 talk (NASA Astrobiology livestream), and a 2023 Three-Minute Thesis talk that won the College of Biological Sciences round (University of Minnesota Graduate School, YouTube)
-- [CV (PDF)](https://pjwinslow.github.io/PJWinslow-website/files/cv.pdf)
+- [In the media](https://pjwinslow.github.io/PJWinslow/#media): "Science fiction to science fact" (College of Biological Sciences, September 2024), a recorded AbGradCon 2024 talk (NASA Astrobiology livestream), and a 2023 Three-Minute Thesis talk that won the College of Biological Sciences round (University of Minnesota Graduate School, YouTube)
+- [CV (PDF)](https://pjwinslow.github.io/PJWinslow/files/cv.pdf)
 - Contact: PjWinslowBio@gmail.com
