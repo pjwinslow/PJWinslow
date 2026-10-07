@@ -1,0 +1,92 @@
+# Presentations, newest first. type: oral | poster
+- title: "Functional characterization of *de novo* primordial-like proteins"
+  venue: "Biophysical Society Meeting 2026"
+  place: "San Francisco, CA"
+  year: 2026
+  type: oral
+  authors: ["Winslow P.J.", "Erickson S", "Seelig B"]
+- title: "Insights into early protein functionality through primordial model-proteins"
+  venue: "Astrobiology Science Conference"
+  place: "Madison, WI"
+  year: 2026
+  type: oral
+  authors: ["Winslow P.J.", "Erickson S", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Insights into early protein biochemistry through model primordial proteins"
+  venue: "Astrobiology Graduate Conference"
+  place: "Tucson, AZ"
+  year: 2026
+  type: oral
+  authors: ["Winslow P.J.", "Newton MS", "Seelig B"]
+- title: "Structure & function of a primordial model-protein"
+  venue: "Chemical Biology interface training grant flash talk"
+  place: "Minneapolis, MN"
+  year: 2026
+  type: oral
+  authors: ["Winslow P.J.", "Newton MS", "Seelig B"]
+- title: "Characterization of primordial-like proteins from reduced amino acid alphabets"
+  venue: "2nd Amano enzyme symposium flash talk"
+  place: "Minneapolis, MN"
+  year: 2025
+  type: oral
+  authors: ["Winslow P.J.", "Erickson S", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Structural insights into the origin of life through model primordial proteins"
+  venue: "Astrobiology Graduate Conference"
+  place: "Ithaca, NY"
+  year: 2024
+  type: oral
+  authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Primordial-like proteins created in a test tube"
+  venue: "Astrobiology Graduate Conference"
+  place: "San Diego, CA"
+  year: 2023
+  type: oral
+  authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Emergence of protein function investigated by biophysical characterization of random, *de novo* ATP binders"
+  venue: "BMBB student seminar"
+  place: "Minneapolis, MN"
+  year: 2023
+  type: oral
+  authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Primordial Park: investigating ancient proteins"
+  venue: "Chemical Biology interface training grant flash talk"
+  place: "Minneapolis, MN"
+  year: 2023
+  type: oral
+  authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]
+
+- title: "Functional characterization of *de novo* primordial-like proteins"
+  venue: "Biophysical Society Meeting 2026"
+  place: "San Francisco, CA"
+  year: 2026
+  type: poster
+  authors: ["Winslow P.J.", "Erickson S", "Seelig B"]
+- title: "Characterization of primordial-like proteins from reduced amino acid alphabets"
+  venue: "2nd Amano enzyme symposium"
+  place: "Minneapolis, MN"
+  year: 2025
+  type: poster
+  authors: ["Winslow P.J.", "Erickson S", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Characterization of primordial-like proteins from reduced amino acid alphabets"
+  venue: "BTI-University of Tokyo joint symposium"
+  place: "Minneapolis, MN"
+  year: 2025
+  type: poster
+  authors: ["Winslow P.J.", "Erickson S", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Characterization of primordial-like proteins from reduced amino acid alphabets"
+  venue: "2025 Central US Synthetic Biology Workshop"
+  place: "Minneapolis, MN"
+  year: 2025
+  type: poster
+  authors: ["Winslow P.J.", "Erickson S", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Time travel in a test tube: exploring primordial proteins through structural characterization"
+  venue: "Astrobiology Science Conference"
+  place: "Providence, RI"
+  year: 2024
+  type: poster
+  authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]
+- title: "Primordial-like proteins created in a test tube"
+  venue: "Astrobiology Graduate Conference"
+  place: "San Diego, CA"
+  year: 2023
+  type: poster
+  authors: ["Winslow P.J.", "Lee KL", "Newton MS", "Seelig B"]

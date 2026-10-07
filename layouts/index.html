@@ -1,0 +1,240 @@
+{{ define "main" }}
+{{ $p := site.Params }}
+
+<section class="band band--dark hero" aria-labelledby="hero-name">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      {{ with $p.monogram }}
+      <img class="hero-monogram" src="{{ . | relURL }}" {{ with imageConfig (path.Join "static" .) }}width="{{ .Width }}" height="{{ .Height }}"{{ end }} alt="{{ $p.monogram_alt }}">
+      {{ end }}
+      <h1 id="hero-name" class="hero-name">{{ $p.author }}</h1>
+      <p class="hero-role">{{ $p.title }}, {{ $p.department }}<br>{{ $p.institution }}</p>
+      <p class="hero-tagline">{{ $p.tagline }}</p>
+      <p class="hero-actions">
+        <a class="button" href="{{ $p.cv | relURL }}">CV (PDF)</a>
+        <a class="button button--ghost" href="mailto:{{ $p.email }}">Email</a>
+        {{ range $p.social }}<a class="button button--ghost" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+      </p>
+    </div>
+    <figure class="hero-photo">
+      <img src="{{ $p.photo | relURL }}" {{ with imageConfig (path.Join "static" $p.photo) }}width="{{ .Width }}" height="{{ .Height }}"{{ end }} alt="{{ $p.photo_alt }}">
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="about" aria-labelledby="about-h">
+  <div class="wrap two-col">
+    <div class="prose">
+      <p class="eyebrow">About</p>
+      <h2 id="about-h">The limits of proteins</h2>
+      {{ .Content }}
+    </div>
+    <aside class="facts" aria-label="At a glance">
+      {{ with $p.lab_photo }}
+      <figure class="lab-photo">
+        <img src="{{ . | relURL }}" {{ with imageConfig (path.Join "static" .) }}width="{{ .Width }}" height="{{ .Height }}"{{ end }} alt="{{ $p.lab_photo_alt }}" loading="lazy">
+      </figure>
+      {{ end }}
+      {{ with $p.interests }}
+      <div>
+        <h3 class="facts-label">Research interests</h3>
+        <ul class="tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{ end }}
+      {{ with $p.advisor }}
+      <div>
+        <h3 class="facts-label">Advisor</h3>
+        <p>{{ . }}</p>
+      </div>
+      {{ end }}
+      {{ with $p.affiliations }}
+      <div>
+        <h3 class="facts-label">{{ cond (gt (len .) 1) "Affiliations" "Affiliation" }}</h3>
+        {{ range . }}<p>{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+      {{ with $p.funding }}
+      <div>
+        <h3 class="facts-label">Funding</h3>
+        {{ range . }}<p class="funding">{{ .name }}<br><span class="meta">{{ .award }}</span></p>{{ end }}
+      </div>
+      {{ end }}
+      {{ with $p.education }}
+      <div>
+        <h3 class="facts-label">Education</h3>
+        {{ range . }}<p>{{ .degree }}, {{ .institution }} <span class="meta">({{ .year }})</span></p>{{ end }}
+      </div>
+      {{ end }}
+    </aside>
+  </div>
+</section>
+
+{{ with site.Data.research }}
+<section class="band band--alt" id="research" aria-labelledby="research-h">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h2 id="research-h">How function emerges from chains of amino acids</h2>
+    <div class="projects">
+      {{ range . }}
+      <article class="project">
+        <h3 class="project-title">{{ .title | markdownify }}</h3>
+        {{ if .coming_soon }}
+        {{ partial "coming-soon.html" (dict "lines" (.lines | default 3)) }}
+        {{ else }}
+        <ul class="project-points">
+          {{ range .points }}<li>{{ . | markdownify }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ if or site.Params.publications_coming_soon site.Data.papers }}
+{{ $papers := site.Data.papers | default slice }}
+{{ $jmp := where $papers "job_market_paper" true }}
+{{ $pub := where $papers "status" "in" (slice "published" "accepted") }}
+{{ $wp := where $papers "status" "in" (slice "revise and resubmit" "under review" "working paper") }}
+{{ $prep := where $papers "status" "in" (slice "in preparation" "work in progress") }}
+<section class="band" id="publications" aria-labelledby="pubs-h">
+  <div class="wrap">
+    <p class="eyebrow">Publications</p>
+    <h2 id="pubs-h">Papers and manuscripts</h2>
+
+    {{ if site.Params.publications_coming_soon }}
+    {{ partial "coming-soon.html" (dict "lines" 8) }}
+    {{ else }}
+    {{ range $jmp }}
+    <article class="jmp">
+      <p class="facts-label">Job market paper</p>
+      <h3 class="paper-title">{{ partial "paper-title.html" . }}</h3>
+      <p class="meta">{{ partial "authors.html" .authors }}{{ with .venue }} &middot; <em>{{ . }}</em>{{ end }} <span class="badge">{{ .status }}</span></p>
+      {{ with .abstract }}<p>{{ . | markdownify }}</p>{{ end }}
+      {{ with .pdf }}<p><a class="button" href="{{ . | relURL }}">PDF</a></p>{{ end }}
+    </article>
+    {{ end }}
+
+    {{ range $group := slice (dict "name" "Publications" "items" $pub) (dict "name" "Working papers" "items" $wp) (dict "name" "In preparation" "items" $prep) }}
+    {{ $items := where $group.items "job_market_paper" "!=" true }}
+    {{ with $items }}
+    <h3 class="group-title">{{ $group.name }}</h3>
+    <ul class="rows">
+      {{ range . }}
+      <li class="row row--solo">
+        <p class="paper-title">{{ partial "paper-title.html" . }} <span class="badge">{{ .status }}</span></p>
+        <p class="meta">{{ partial "authors.html" .authors }}{{ with .year }}, {{ . }}{{ end }}{{ with .venue }} &middot; <em>{{ . }}</em>{{ end }}</p>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with site.Data.talks }}
+<section class="band band--alt" id="presentations" aria-labelledby="talks-h">
+  <div class="wrap">
+    <p class="eyebrow">Presentations</p>
+    <h2 id="talks-h">Talks and posters</h2>
+    {{ range $group := slice (dict "type" "oral" "name" "Oral presentations") (dict "type" "poster" "name" "Poster presentations") }}
+    {{ with where $.Site.Data.talks "type" $group.type }}
+    <h3 class="group-title">{{ $group.name }}</h3>
+    <ul class="rows">
+      {{ range . }}
+      <li class="row">
+        <span class="row-year">{{ .year }}</span>
+        <div class="row-body">
+          <p class="row-title">{{ .title | markdownify }}</p>
+          <p class="meta">{{ .venue }}, {{ .place }}</p>
+          <p class="meta">{{ partial "authors.html" .authors }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ if or site.Data.teaching site.Data.service }}
+<section class="band" id="teaching" aria-labelledby="teaching-h">
+  <div class="wrap">
+    <p class="eyebrow">Teaching &amp; service</p>
+    <h2 id="teaching-h">Teaching, mentoring, and outreach</h2>
+    {{ with site.Data.teaching }}
+    <h3 class="group-title">Teaching and mentoring</h3>
+    <ul class="rows">
+      {{ range . }}
+      <li class="row">
+        <span class="row-year">{{ .term }}</span>
+        <div class="row-body">
+          <p class="row-title">{{ .course }}</p>
+          <p class="meta">{{ .role }}, {{ .institution }}</p>
+          {{ with .description }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    {{ with site.Data.service }}
+    <h3 class="group-title">Service and outreach</h3>
+    <ul class="rows">
+      {{ range . }}
+      <li class="row">
+        <span class="row-year">{{ .term }}</span>
+        <div class="row-body">
+          <p class="row-title">{{ .role }}</p>
+          <p class="meta">{{ .organization }}</p>
+          {{ with .description }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with site.Data.awards }}
+<section class="band band--alt" id="awards" aria-labelledby="awards-h">
+  <div class="wrap">
+    <p class="eyebrow">Awards</p>
+    <h2 id="awards-h">Grants, fellowships, and awards</h2>
+    <ul class="rows rows--compact">
+      {{ range . }}
+      <li class="row"><span class="row-year">{{ .year }}</span><span class="row-body">{{ .name }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
+
+<section class="band band--dark" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h" class="visually-hidden">Contact</h2>
+    <div class="contact-cols">
+      <div>
+        <h3 class="contact-label">Get in touch</h3>
+        <p><a href="mailto:{{ $p.email }}">{{ $p.email }}</a></p>
+        <p><a href="{{ $p.cv | relURL }}">CV (PDF)</a></p>
+        {{ range $p.social }}<p><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>{{ end }}
+      </div>
+      <div>
+        <h3 class="contact-label">Affiliations</h3>
+        {{ range $p.affiliations }}<p>{{ . }}</p>{{ end }}
+      </div>
+      {{ with $p.advisor }}
+      <div>
+        <h3 class="contact-label">Advisor</h3>
+        <p>{{ . }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

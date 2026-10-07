@@ -1,0 +1,13 @@
+{{- /* Blurred placeholder lines with a "Coming soon" label. The real text is not
+       included in the page, so it cannot be read from the source.
+       Takes a dict: "lines" (how many lines to draw) and optional "label". */ -}}
+{{- $widths := slice 92 76 85 61 88 70 95 57 81 66 -}}
+{{- $lines := .lines | default 3 -}}
+<div class="coming-soon">
+  <div class="coming-soon-lines" aria-hidden="true">
+    {{- range $i, $_ := seq $lines }}
+    <span style="width: {{ index $widths (mod $i (len $widths)) }}%"></span>
+    {{- end }}
+  </div>
+  <p class="coming-soon-label">{{ .label | default "Coming soon" }}</p>
+</div>

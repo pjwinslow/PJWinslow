@@ -1,0 +1,27 @@
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-name" href="{{ site.Home.RelPermalink }}">{{ site.Params.author }}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      {{ range site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
+<script>
+  (function () {
+    var btn = document.querySelector(".nav-toggle");
+    var links = document.getElementById("nav-links");
+    function set(open) {
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      links.classList.toggle("is-open", open);
+    }
+    btn.addEventListener("click", function () { set(btn.getAttribute("aria-expanded") !== "true"); });
+    links.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+  })();
+</script>

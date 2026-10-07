@@ -1,0 +1,9 @@
+# Papers and manuscripts. Newest or most important first.
+# status: published | accepted | revise and resubmit | under review | working paper |
+#         work in progress | in preparation
+# To link a PDF, put the file in static/files/ and set pdf: "files/your-file.pdf".
+# Use *asterisks* for italics, e.g. *de novo*.
+
+# Papers are held back until publication; the Publications section shows
+# "Coming soon" while publications_coming_soon is true in hugo.yaml.
+[]

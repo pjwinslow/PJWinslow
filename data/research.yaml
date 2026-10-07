@@ -1,0 +1,22 @@
+# Research projects shown in the Research section, in display order.
+- title: "Characterization of *de novo* primordial-like proteins"
+  points:
+    - "Libraries of proteins built from reduced amino acid alphabets act as models for primordial proteins."
+    - "Optimized the expression and purification of more than 40 *de novo* proteins from these libraries in *E. coli*."
+    - "Characterized their biophysics with circular dichroism, X-ray crystallography, and nuclear magnetic resonance."
+    - "Measured the kinetics of more than 20 *de novo* proteins with ultrafiltration binding assays using radiolabeled adenosine triphosphate."
+    - "Identified the functional core of a *de novo* variant of interest with protein machine learning and rational design."
+
+- title: "Computational simplification of the amino acid alphabet"
+  # true: the description shows "Coming soon" with this many blurred lines.
+  coming_soon: true
+  lines: 3
+
+- title: "Structure and evolution of *de novo* ligases"
+  points:
+    - "Used protein language models to predict the structures of *de novo* ligases."
+    - "Analyzed the predicted structures to make arguments about the properties of these enzymes and their possible evolutionary trajectories."
+
+- title: "Engineered TIM barrel scaffold"
+  points:
+    - "Carried out X-ray crystallography on an engineered TIM barrel scaffold protein, then obtained and solved a structure."

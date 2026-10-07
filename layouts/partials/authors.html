@@ -1,0 +1,5 @@
+{{- $me := site.Params.author_short -}}
+{{- range $i, $a := . -}}
+{{- if $i }}, {{ end -}}
+{{- if eq $a $me }}<strong class="me">{{ $a }}</strong>{{ else }}{{ $a }}{{ end -}}
+{{- end -}}

@@ -1,0 +1,88 @@
+# The site's public address. If the repository is renamed to pjwinslow.github.io,
+# change this to "https://pjwinslow.github.io/".
+baseURL: "https://pjwinslow.github.io/PJWinslow-website/"
+title: "Peter J. Winslow"
+languageCode: en-us
+
+disableKinds: ["taxonomy", "term", "RSS"]
+
+params:
+  description: "PhD Candidate, Department of Biochemistry, Molecular Biology, and Biophysics, University of Minnesota"
+  author: "Peter J. Winslow"
+  # How your name appears in author lists; it is shown in bold.
+  author_short: "Winslow P.J."
+  email: "PjWinslowBio@gmail.com"
+  title: "PhD Candidate"
+  department: "Department of Biochemistry, Molecular Biology, and Biophysics"
+  institution: "University of Minnesota"
+  affiliations:
+    - "Department of Biochemistry, Molecular Biology, and Biophysics (BMBB), University of Minnesota"
+    - "BioTechnology Institute, University of Minnesota"
+  advisor: "Burckhard Seelig"
+  tagline: "I am a biochemist interested in the vast unexplored chemical diversity in the polymers that make life possible."
+  photo: "images/headshot.jpg"
+  photo_alt: "Headshot of Peter J. Winslow."
+  lab_photo: "images/lab.jpg"
+  lab_photo_alt: "Peter J. Winslow in a white lab coat and purple gloves, pipetting at a laboratory bench."
+  monogram: "images/pjw-monogram.webp"
+  monogram_alt: "The initials PJW, each letter formed by a protein structure."
+  cv: "files/cv.pdf"
+  funding:
+    - name: "NASA FINESST"
+      award: "NNH23ZDA001N-FINESST 23-PLANET23-0058"
+  # true: the Publications section shows "Coming soon" instead of the papers in data/papers.yaml.
+  publications_coming_soon: true
+  interests:
+    - "Origin of life"
+    - "Protein sequence space"
+    - "New-to-nature proteins"
+    - "Protein design"
+  education:
+    - degree: "PhD, Biochemistry, Molecular Biology, and Biophysics"
+      institution: "University of Minnesota"
+      year: "expected 2027"
+    - degree: "B.S., Biochemistry"
+      institution: "University of Minnesota"
+      year: "2022"
+  social: []
+  mysite:
+    credit: false
+    discovery: true
+    design:
+      reference: "https://www.searslab.eeb.ucla.edu/"
+      concept: "modelled on the Sears Lab site: full-width alternating bands; dark hero band with a PJW monogram of protein structures above the name and a headshot on the right; condensed display headings (Fjalla One) over a Franklin sans body; small uppercase eyebrow labels; square-cornered buttons; three-column contact band"
+
+menu:
+  main:
+    - name: About
+      url: "/#about"
+      weight: 10
+    - name: Research
+      url: "/#research"
+      weight: 20
+    - name: Publications
+      url: "/#publications"
+      weight: 30
+    - name: Presentations
+      url: "/#presentations"
+      weight: 40
+    - name: Teaching
+      url: "/#teaching"
+      weight: 50
+    - name: Awards
+      url: "/#awards"
+      weight: 60
+    - name: CV
+      url: "/files/cv.pdf"
+      weight: 70
+    - name: Contact
+      url: "/#contact"
+      weight: 80
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+sitemap:
+  changefreq: monthly

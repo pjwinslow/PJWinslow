@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="band">
+  <div class="wrap prose">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ .Content }}
+    <ul class="plain-list">
+      {{ range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Date }} <span class="meta">{{ .Format "January 2, 2006" }}</span>{{ end }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

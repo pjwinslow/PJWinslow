@@ -1,0 +1,4 @@
+{{- $title := .title | markdownify -}}
+{{- with .pdf -}}<a href="{{ . | relURL }}">{{ $title }}</a>
+{{- else -}}{{- with .link -}}<a href="{{ . }}" target="_blank" rel="noopener">{{ $title }}</a>
+{{- else -}}{{ $title }}{{- end -}}{{- end -}}
