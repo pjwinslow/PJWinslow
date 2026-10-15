@@ -93,7 +93,7 @@ a:hover { color: var(--color-accent-hover); text-decoration: underline; text-und
 .nav-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; list-style: none; padding: 0; }
 .nav-links a {
   color: var(--color-text); font-size: 0.9rem; font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.08em;
+  text-transform: uppercase; letter-spacing: 0.06em;
 }
 .nav-links a:hover { color: var(--color-accent); text-decoration: none; }
 .nav-toggle { display: none; }

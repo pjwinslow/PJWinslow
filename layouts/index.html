@@ -142,8 +142,27 @@
 </section>
 {{ end }}
 
+{{ with site.Data.projects }}
+<section class="band band--alt" id="projects" aria-labelledby="projects-h">
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h2 id="projects-h">Software and tools</h2>
+    <div class="media-cards">
+      {{ range . }}
+      <article class="media-card">
+        <p class="media-type">{{ .type }}</p>
+        <h3 class="media-title"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}<span class="visually-hidden"> (opens in a new tab)</span></a></h3>
+        <p>{{ .description }}</p>
+        <p class="meta">{{ with .language }}{{ . }}{{ end }}{{ with .repo }} &middot; <a href="{{ . }}" target="_blank" rel="noopener">Source code<span class="visually-hidden"> (opens in a new tab)</span></a>{{ end }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ with site.Data.talks }}
-<section class="band band--alt" id="presentations" aria-labelledby="talks-h">
+<section class="band" id="presentations" aria-labelledby="talks-h">
   <div class="wrap">
     <p class="eyebrow">Presentations</p>
     <h2 id="talks-h">Talks and posters</h2>
@@ -170,7 +189,7 @@
 {{ end }}
 
 {{ if or site.Data.teaching site.Data.service }}
-<section class="band" id="teaching" aria-labelledby="teaching-h">
+<section class="band band--alt" id="teaching" aria-labelledby="teaching-h">
   <div class="wrap">
     <p class="eyebrow">Teaching &amp; service</p>
     <h2 id="teaching-h">Teaching, mentoring, and outreach</h2>
@@ -209,7 +228,7 @@
 {{ end }}
 
 {{ with site.Data.awards }}
-<section class="band band--alt" id="awards" aria-labelledby="awards-h">
+<section class="band" id="awards" aria-labelledby="awards-h">
   <div class="wrap">
     <p class="eyebrow">Awards</p>
     <h2 id="awards-h">Grants, fellowships, and awards</h2>
@@ -223,7 +242,7 @@
 {{ end }}
 
 {{ with site.Data.media }}
-<section class="band" id="media" aria-labelledby="media-h">
+<section class="band band--alt" id="media" aria-labelledby="media-h">
   <div class="wrap">
     <p class="eyebrow">In the media</p>
     <h2 id="media-h">News and features</h2>

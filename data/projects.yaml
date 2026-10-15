@@ -1,0 +1,8 @@
+# Software and other projects, newest first.
+# url: where people use it (live site); repo: source code (optional)
+- name: "BuildAFold"
+  type: "Web app"
+  description: "A browser tool for sketching protein backbones: drag helices and strands into place, draw a path, or type a word and get a backbone shaped like it. It closes the loops, flags clashes, and exports a backbone and conditioning files for RFdiffusion and ProteinMPNN."
+  url: "https://pjwinslow.github.io/BuildAFold/"
+  repo: "https://github.com/pjwinslow/BuildAFold"
+  language: "JavaScript"

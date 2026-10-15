@@ -46,6 +46,10 @@ Set `job_market_paper: true` on that paper and add its `abstract`. It will appea
 
 The About text is in `content/_index.md`, below the line with `---`. Your name, title, department, tagline, interests, advisor, affiliation, education, and email are in `hugo.yaml` under `params`.
 
+## Add a project
+
+Open `data/projects.yaml` and copy the BuildAFold entry. `url` is where people use it, and `repo` is the source code (leave it out if there is none). Projects show as cards in the Projects section.
+
 ## Add a presentation
 
 Open `data/talks.yaml` and add an entry at the top. Use `type: oral` or `type: poster`.
